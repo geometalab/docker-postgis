@@ -14,5 +14,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update &&\
     postgresql-9.3-postgis-2.1\
     postgresql-9.3-postgis-scripts
 
-RUN mkdir -p /docker-entrypoint-initdb.d
-COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
+COPY ./docker-entrypoint-initdb.d /docker-entrypoint-initdb.d

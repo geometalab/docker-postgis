@@ -12,5 +12,5 @@ RUN ["echo", "deb http://http.debian.net/debian wheezy-backports main", ">>", "/
 RUN DEBIAN_FRONTEND=noninteractive apt-get update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -y install\
     postgis
-RUN mkdir -p /docker-entrypoint-initdb.d
-COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
+
+COPY ./docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
