@@ -11,7 +11,7 @@ ENV POSTGIS_VERSION 2.1.7+dfsg-0~exp1.pgdg70+1
 RUN ["echo", "deb http://http.debian.net/debian jessie-backports main", ">>", "/etc/apt/sources.list"]
 RUN DEBIAN_FRONTEND=noninteractive apt-get update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -y install\
-    postgresql-9.4-postgis-2.1\
-    postgresql-9.4-postgis-scripts
+    postgresql-9.5-postgis-2.1\
+    postgresql-9.5-postgis-scripts
 
 COPY ./docker-entrypoint-initdb.d /docker-entrypoint-initdb.d

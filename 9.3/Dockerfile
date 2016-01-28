@@ -8,7 +8,7 @@ ENV LANG en_US.utf8
 ENV POSTGIS_MAJOR 2.1
 ENV POSTGIS_VERSION 2.1.7+dfsg-0~exp1.pgdg70+1
 
-RUN ["echo", "deb http://http.debian.net/debian wheezy-backports main", ">>", "/etc/apt/sources.list"]
+RUN ["echo", "deb http://http.debian.net/debian jessie-backports main", ">>", "/etc/apt/sources.list"]
 RUN DEBIAN_FRONTEND=noninteractive apt-get update &&\
     DEBIAN_FRONTEND=noninteractive apt-get -y install\
     postgresql-9.3-postgis-2.1\
